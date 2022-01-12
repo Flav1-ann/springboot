@@ -12,7 +12,7 @@ services:
           - app-network
     db:
       image: mysql:8.0
-      container_name: mysql-database
+      container_name: mysql-database-spring
       volumes:
         - ./mysql-data:/var/lib/mysql
         - ./myresto.sql:/docker-entrypoint-initdb.d
