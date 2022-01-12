@@ -9,6 +9,5 @@ RUN git clone https://github.com/Flav1-ann/springboot /data/springboot
 WORKDIR /data/springboot
 RUN mvn clean package install
 WORKDIR /data/springboot/target
-RUN java -jar demo-springboot-0.0.1-SNAPSHOT.jar
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
