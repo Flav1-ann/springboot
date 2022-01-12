@@ -5,7 +5,7 @@ RUN apt-get install maven -y
 RUN apt-get install git -y
 RUN apt-get install libmariadb-java -y
 RUN mkdir /data
-RUN git clone https://github.com/Flav1-ann/MyResto.git /data/springboot
+RUN git clone https://github.com/Flav1-ann/springboot /data/springboot
 WORKDIR /data/springboot
 RUN mvn clean package install
 WORKDIR /data/springboot/target
