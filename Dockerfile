@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk-alpine
+FROM openjdk:8
 LABEL maintainer="Flavien ANNAIX, Maxime DAZIN"
 RUN apt update -y
 RUN apt-get install maven -y
@@ -10,4 +10,4 @@ WORKDIR /data/springboot
 RUN mvn clean package install
 WORKDIR /data/springboot/target
 EXPOSE 8080
-CMD ["java","-jar","/message-server-1.0.0.jar"]
+CMD ["java","-jar","/demo-springboot-0.0.1-SNAPSHOT.jar"]
