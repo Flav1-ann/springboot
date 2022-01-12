@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Musique</title>
+</head>
+<body>
+<div align="center">
+    <h1>Musique List</h1>
+    <a href="/new">Creation d'une nouvelle musique</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+        <tr>
+            <th>Musique ID</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="music : ${listMusic}">
+            <td th:text="${music.id}">Musique ID</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
