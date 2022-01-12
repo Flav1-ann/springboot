@@ -3,6 +3,7 @@ services:
     web:
         ports:
           - '8027:8080'
+        restart: always
         build:
           context: .
           dockerfile: Dockerfile
