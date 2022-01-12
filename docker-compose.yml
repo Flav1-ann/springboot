@@ -1,0 +1,48 @@
+version: '3.3'
+services:
+    web:
+        ports:
+          - '8027:8080'
+        build:
+          context: .
+          dockerfile: Dockerfile
+        depends_on:
+          - db
+        networks:
+          - app-network
+    db:
+      image: mysql:8.0
+      container_name: mysql-database
+      volumes:
+        - ./mysql-data:/var/lib/mysql
+        - ./myresto.sql:/docker-entrypoint-initdb.d
+      command: --init-file /data/application/list_musique.sql
+      restart: always
+      ports:
+       - 3306:3306
+      environment:
+        MYSQL_DATABASE: list_musique
+        MYSQL_USER: user
+        MYSQL_PASSWORD: test
+        MYSQL_ROOT_PASSWORD: test
+      networks:
+        - app-network
+    phpmyadmin:
+      image: phpmyadmin
+      restart: always
+      ports:
+        - 8080:80
+      depends_on:
+        - db
+      environment:
+        MYSQL_USER: user
+        MYSQL_PASSWORD: root
+        MYSQL_ROOT_PASSWORD: root
+      networks:
+        - app-network
+volumes:
+    db_vol:
+networks:
+  app-network:
+    name: app-network
+    driver: bridge
