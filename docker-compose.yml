@@ -18,7 +18,7 @@ services:
        - 3306:3306
       environment:
         MYSQL_DATABASE: list_musique
-        MYSQL_USER: test
+        MYSQL_USER: user
         MYSQL_PASSWORD: test
         MYSQL_ROOT_PASSWORD: test
       networks:
@@ -31,9 +31,9 @@ services:
       depends_on:
         - db
       environment:
-        MYSQL_USER: test
-        MYSQL_PASSWORD: test
-        MYSQL_ROOT_PASSWORD: test
+        MYSQL_USER: user
+        MYSQL_PASSWORD: root
+        MYSQL_ROOT_PASSWORD: root
       networks:
         - app-network
 volumes:
