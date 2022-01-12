@@ -12,11 +12,7 @@ services:
           - app-network
     db:
       image: mysql:8.0
-      container_name: mysql-database-spring
-      volumes:
-        - ./mysql-data:/var/lib/mysql
-        - ./myresto.sql:/docker-entrypoint-initdb.d
-      command: --init-file /data/application/list_musique.sql
+      container_name: mysql-database
       restart: always
       ports:
        - 3306:3306

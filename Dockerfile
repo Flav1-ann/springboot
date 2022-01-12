@@ -10,4 +10,4 @@ WORKDIR /data/springboot
 RUN mvn clean package install
 WORKDIR /data/springboot/target
 EXPOSE 8080
-CMD ["java","-jar","/demo-springboot-0.0.1-SNAPSHOT.jar"]
+CMD ["java","-jar","./demo-springboot-0.0.1-SNAPSHOT.jar"]
