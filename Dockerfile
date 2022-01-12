@@ -1,6 +1,5 @@
 FROM openjdk:8-jdk-alpine
 LABEL maintainer="Flavien ANNAIX, Maxime DAZIN"
-RUN apt update -y
 RUN apt-get install maven -y
 RUN apt-get install git -y
 RUN apt-get install libmariadb-java -y
