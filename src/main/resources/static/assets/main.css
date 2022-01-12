@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+input {
+    border:none;
+    outline:none;
+}
+
+body {
+    min-height: 100vh;
+    background-color:dodgerblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    min-height: 80vh;
+    min-width: 80vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.content.form {
+    justify-content: center;
+}
+
+h1 {
+
+    margin: 2.5em 0;
+}
+
+.table_music {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    width:80%;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.table_music  td {
+    width:33%;
+}
+
+.table_music th,
+.table_music td {
+    padding: 12px 15px;
+}
+
+
+.table_music thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: center;
+}
+
+.table_music tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.table_music tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.table_music tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.table_music tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+.music_button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    background-color:#009879;
+    color:white;
+    font-weight: bold;
+    padding:1em;
+}
+
+.music_button:hover {
+    filter: brightness(85%);
+}
+
+.music_button.add {
+    float:right;
+    margin-bottom:2.5em;
+}
+
+.music_input {
+    font-weight: lighter;
+    font-size:2em;
+    color:#009879;
+    border-bottom: 1px solid grey;
+    padding:10px;
+}
+
+.music_input:focus {
+    border-bottom: 1px solid #009879;
+}
