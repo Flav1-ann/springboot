@@ -1,4 +1,4 @@
-FROM tomcat:7.0.108-jdk8-openjdk
+FROM openjdk:8-jdk-alpine
 LABEL maintainer="Flavien ANNAIX, Maxime DAZIN"
 RUN apt update -y
 RUN apt-get install maven -y
