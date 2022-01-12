@@ -1,8 +1,5 @@
 FROM openjdk:8-jdk-alpine
 LABEL maintainer="Flavien ANNAIX, Maxime DAZIN"
-RUN apt-get install maven -y
-RUN apt-get install git -y
-RUN apt-get install libmariadb-java -y
 RUN mkdir /data
 RUN git clone https://github.com/Flav1-ann/springboot /data/springboot
 WORKDIR /data/springboot
