@@ -10,4 +10,3 @@ WORKDIR /data/springboot
 RUN mvn clean package install
 WORKDIR /data/springboot/target
 EXPOSE 8080
-CMD ["catalina.sh", "run"]
