@@ -3,9 +3,7 @@ services:
     web:
         ports:
           - '8027:8080'
-        build:
-          context: .
-          dockerfile: Dockerfile
+        image: spring:v1
         depends_on:
           - db
         networks:
