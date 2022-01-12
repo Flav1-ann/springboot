@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM maven:3-openjdk-8
 LABEL maintainer="Flavien ANNAIX, Maxime DAZIN"
 RUN apt update -y
 RUN apt-get install maven -y
@@ -10,3 +10,4 @@ WORKDIR /data/springboot
 RUN mvn clean package install
 WORKDIR /data/springboot/target
 EXPOSE 8080
+CMD ["catalina.sh", "run"]
