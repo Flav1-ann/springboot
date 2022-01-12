@@ -7,7 +7,7 @@
 </head>
 <body>
 <div class="content form">
-    <form action="#" th:action="@{/music/}" th:object="${music}" method="post">
+    <form action="#" th:action="@{/save/}" th:object="${music}" method="post">
         <input class="music_input" placeholder="Titre" type="text" th:field="*{title}"/>
         <input class="music_input" placeholder="Auteur" type="text" th:field="*{author}"/>
         <input class="music_button" type="submit" value="Enregistrer"/>
