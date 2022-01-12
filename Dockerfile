@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM tomcat:7.0.108-jdk8-openjdk
 LABEL maintainer="Flavien / Maxime"
 RUN apt update -y
 RUN apt-get install maven -y
