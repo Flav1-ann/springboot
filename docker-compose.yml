@@ -47,8 +47,6 @@ services:
         - app-network
       depends_on:
         - docker-mysql
-volumes:
-    db_vol:
 networks:
   app-network:
     name: app-network
