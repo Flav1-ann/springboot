@@ -31,13 +31,21 @@
 
     - name: Update apt and install docker-ce
       apt: name={{ item }} state=latest update_cache=yes
-      loop: ["docker-ce", "docker-compose"]
+      loop: ["docker-ce"]
 
     - name: Install Docker Module for Python
       pip:
         name: docker
 
+    - name: install docker-compose
+      become: True
+      shell:
+        cmd: |
+          "sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose"
+          "sudo chmod +x /usr/local/bin/docker-compose"
+          "sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose"
+
     - name: Run container
       become: True
       shell:
-        cmd: "docker-compose -f ~/springboot/docker-compose.yml up -d"
+        cmd: "sudo docker-compose -f ~/springboot/docker-compose.yml up -d"
