@@ -29,5 +29,5 @@
         loop: [ 'docker-ce','docker-compose' ]
 
     - name: Install Docker Module for Python
-      pip3:
+      pip:
         name: docker
