@@ -40,4 +40,4 @@
     - name: Run container
       become: True
       shell:
-        cmd: "docker-compose -f springboot/docker-compose.yml up -d"
+        cmd: "docker-compose -f ~/springboot/docker-compose.yml up -d"
