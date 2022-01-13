@@ -21,12 +21,13 @@
         repo: deb https://download.docker.com/linux/ubuntu bionic stable
         state: present
 
-    - name: Update apt and install docker
-      apt: update_cache=yes name={{item}} state=latest
-      loop: [ 'docker-ce','docker-compose' ]
+    - name: Update apt and install docker-ce
+      apt: update_cache=yes name=docker-ce state=latest
 
-    - name: Deploy docker-compose
-      docker_compose:
-        project_src: springboot
-        files:
-          - docker-compose.yml
+    - name: Update apt and install docker
+        apt: update_cache=yes name={{item}} state=latest
+        loop: [ 'docker-ce','docker-compose' ]
+
+    - name: Install Docker Module for Python
+      pip3:
+        name: docker
