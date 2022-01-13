@@ -1,16 +1,17 @@
 version: '3.3'
 services:
     web:
+        restart: always
         ports:
           - 80:8080
         build:
           context: .
           dockerfile: Dockerfile
         depends_on:
-          - phpmyadmin
+          - mysql-database
         networks:
           - app-network
-    db:
+    mysql-database:
       image: mysql:8.0
       container_name: mysql-database
       restart: always
@@ -29,7 +30,7 @@ services:
       ports:
         - 8181:80
       depends_on:
-        - db
+        - mysql-database
       environment:
         MYSQL_USER: user
         MYSQL_PASSWORD: root
