@@ -42,8 +42,6 @@ services:
         - docker-mysql
       networks:
         - app-network
-volumes:
-    db_vol:
 networks:
   app-network:
     name: app-network
