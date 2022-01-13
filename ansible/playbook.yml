@@ -26,6 +26,7 @@
       loop: [ 'docker-ce','docker-compose' ]
 
     - name: Deploy docker-compose
-      project_src: springboot
-      files:
-        - docker-compose.yml
+      docker_compose:
+        project_src: springboot
+        files:
+          - docker-compose.yml
