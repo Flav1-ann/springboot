@@ -33,7 +33,7 @@ resource "aws_instance" "annaix-ec2" {
       "sudo apt update -y",
       "sudo apt install ansible -y",
       "git clone https://github.com/Flav1-ann/springboot.git",
-      "sudo ansible-playbook -i springboot/ansible/hosts.yml springboot/ansible/playbook.yml"
+      "sudo ansible-playbook --connection=local -i springboot/ansible/hosts.yml springboot/ansible/playbook.yml"
     ]
   }
 }

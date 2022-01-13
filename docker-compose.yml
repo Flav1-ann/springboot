@@ -2,7 +2,7 @@ version: '3.3'
 services:
     web:
         ports:
-          - '8027:8080'
+          - '8080:8080'
         build:
           context: .
           dockerfile: Dockerfile
@@ -27,7 +27,7 @@ services:
       image: phpmyadmin
       restart: always
       ports:
-        - 8080:80
+        - 8181:80
       depends_on:
         - db
       environment:
