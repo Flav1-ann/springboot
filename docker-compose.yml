@@ -32,6 +32,7 @@ services:
         - app-network
     spring:
       container_name: springapp
+      restart: always
       build:
         context: .
         dockerfile: Dockerfile
