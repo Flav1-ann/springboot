@@ -9,6 +9,6 @@ renseigner login et password dockerhub
 ```docker build -t logindockerhub/springapp . ```
 
 4. Push sur le repo docker hub
-```docker push logindockerhub/springapp``
+```docker push logindockerhub/springapp```
 
 5. Ajouter sont images a sont docker-compose
