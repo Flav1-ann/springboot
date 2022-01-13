@@ -28,7 +28,7 @@
         name: docker
 
     - name: Docker compose file
-        docker_compose:
+      docker_compose:
           project_src: ~/springboot/ansible
           files:
             - docker-compose.yml
