@@ -47,11 +47,6 @@
       shell:
         cmd: "sudo chmod +x /usr/local/bin/docker-compose"
 
-    - name: install docker-compose
-      become: True
-      shell:
-        cmd: "sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose"
-
 
     - name: Run container
       become: True
