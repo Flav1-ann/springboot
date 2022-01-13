@@ -1,16 +1,5 @@
 version: '3.3'
 services:
-    web:
-        restart: always
-        ports:
-          - 80:8080
-        build:
-          context: .
-          dockerfile: Dockerfile
-        depends_on:
-          - mysql-database
-        networks:
-          - app-network
     mysql-database:
       image: mysql:8.0
       container_name: mysql-database
@@ -20,8 +9,8 @@ services:
       environment:
         MYSQL_DATABASE: list_musique
         MYSQL_USER: user
-        MYSQL_PASSWORD: root
-        MYSQL_ROOT_PASSWORD: root
+        MYSQL_PASSWORD: user
+        MYSQL_ROOT_PASSWORD: user
       networks:
         - app-network
     phpmyadmin:
@@ -33,8 +22,24 @@ services:
         - mysql-database
       environment:
         MYSQL_USER: user
-        MYSQL_PASSWORD: root
-        MYSQL_ROOT_PASSWORD: root
+        MYSQL_PASSWORD: user
+        MYSQL_ROOT_PASSWORD: user
+      networks:
+        - app-network
+    springapp:
+      container_name: springapp
+      build:
+        context: .
+        dockerfile: Dockerfile
+      ports:
+        - "8080:8080"
+      environment:
+        SPRING_DATASOURCE_URL: jdbc:mysql://mysql-database:3306/list_musique=false&allowPublicKeyRetrieval=true
+        SPRING_DATASOURCE_USERNAME: user
+        SPRING_DATASOURCE_PASSWORD: user
+        APP_PORT: 8080
+      depends_on:
+        - docker-mysql
       networks:
         - app-network
 volumes:
