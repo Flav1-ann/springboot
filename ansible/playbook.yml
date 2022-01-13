@@ -22,11 +22,8 @@
         state: present
 
     - name: Update apt and install docker-ce
-      apt: update_cache=yes name=docker-ce state=latest
-
-    - name: Update apt and install docker-ce
-      apt: update_cache=yes name=docker-compose state=latest
-
+      apt: update_cache=yes name={{item}} state=latest
+      loop: ['docker-ce','docker-compose']
 
     - name: Install Docker Module for Python
       pip3:
