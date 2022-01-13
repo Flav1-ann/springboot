@@ -1,0 +1,7 @@
+Ip_public: 3.91.109.42 ; ID: i-02aa000d8dde3c931 ; AZ: us-east-1b; 
+Ip_public: 3.220.160.224 ; ID: i-03dcffac581b671b1 ; AZ: us-east-1b; 
+Ip_public: 3.220.160.224 ; ID: i-0db55ebf4132ad855 ; AZ: us-east-1b; 
+Ip_public: 3.220.160.224 ; ID: i-0838bd8b8e767f82b ; AZ: us-east-1b; 
+Ip_public: 3.220.160.224 ; ID: i-074f54fb6a1cb7830 ; AZ: us-east-1b; 
+Ip_public: 3.218.124.149 ; ID: i-0b34c7384d1d78d45 ; AZ: us-east-1b; 
+Ip_public: 44.199.61.167 ; ID: i-08f8f305b8bd3f699 ; AZ: us-east-1b; 

@@ -37,3 +37,9 @@ build/
 /**/*.iml
 /**/.idea/
 /**/src/main/resources/*.properties
+/terraform/app/.terraform/
+/terraform/app/.terraform.tfstate.lock.info
+/terraform/app/.terraform.lock.hcl
+/terraform/app/infos_ec2.txt
+/terraform/app/terraform.tfstate
+/terraform/app/terraform.tfstate.backup
