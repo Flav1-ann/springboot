@@ -10,7 +10,7 @@ Ce projet comprend le déploiement via terraform, ansible et docker de l'applica
 
 * Un compte AWS amazon [site](https://aws.amazon.com/fr/console/)
 * Un fichier "credentials" [voir documentation](https://docs.aws.amazon.com/fr_fr/toolkit-for-vscode/latest/userguide/obtain-credentials.html)
-* Une clé pour la connexion aux machines [voir documentation](https://docs.aws.amazon.com/fr_fr/AWSEC2/latest/UserGuide/ec2-key-pairs.html)
+* Une clé pour la connexion aux machines au format `.pem` [voir documentation](https://docs.aws.amazon.com/fr_fr/AWSEC2/latest/UserGuide/ec2-key-pairs.html)
 * Terraform v1.1.3 [installation](https://learn.hashicorp.com/tutorials/terraform/install-cli)
 
 ##  Paramétrage
@@ -25,7 +25,8 @@ Le premier fichier est le fichier main.tf se trouvant au chemin terraform/app:
 
 Le second fichier est le fichier variable.tf se trouvant au chemin terraform/modules/ec2.
 
-- Modifiez la clé `default` de la variable `path_ssh_key` avec le chemin jusqu'à votre clé de connexion.
+- Modifiez la clé `default` de la variable `path_ssh_key` avec le chemin jusqu'au dossier contenant votre clé de connexion.
+- Modifiez la clé `default` de la variable `ssh_key` avec le nom de votre clé de connexion (sans l'extension .pem).
 
 ## Lancement
 
