@@ -34,7 +34,7 @@ services:
       container_name: springapp
       restart: always
       build:
-        context: ..
+        context: .
         dockerfile: Dockerfile
       ports:
         - "8080:8080"
