@@ -51,5 +51,4 @@
     - name: Run container
       become: True
       shell:
-        cmd: "sudo docker-compose up -d"
-        chdir: "~/springboot/docker"
+        cmd: "sudo docker-compose -f ~/springboot/docker-compose.yml up -d"
