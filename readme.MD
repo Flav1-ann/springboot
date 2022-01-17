@@ -41,6 +41,9 @@ Une fois le paramétrage réalisé, vous pouvez exécuter terraform. Pour ce fai
 
 le déploiement prend un certain temps, une fois terminé rendez-vous sur votre [compte aws](https://console.aws.amazon.com/ec2). Vous devriez voir une instance en cours d'exécution. Récupérer son ip et entrez là dans le navigateur sous le format suivant: http://VOTRE_IP:8080
 
+![image résultat](doc/result.png "Title")
+
+
 cependant une erreur connue peut survenir, si c'est le cas rendez-vous [ici](#troubleshooting) 
 
 <div id='troubleshooting'/>
