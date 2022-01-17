@@ -9,8 +9,8 @@ resource "aws_security_group" "my_sg" {
 
   #pour le HTTP pour tous
   ingress {
-    from_port        = 80
-    to_port          = 80
+    from_port        = 8080
+    to_port          = 8080
     protocol         = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]
     ipv6_cidr_blocks = ["::/0"]
