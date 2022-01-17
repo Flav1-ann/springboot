@@ -28,6 +28,10 @@ Le second fichier est le fichier variable.tf se trouvant au chemin terraform/mod
 - Modifiez la clé `default` de la variable `path_ssh_key` avec le chemin jusqu'au dossier contenant votre clé de connexion.
 - Modifiez la clé `default` de la variable `ssh_key` avec le nom de votre clé de connexion (sans l'extension .pem).
 
+### Renommer les variables (Optionnel)
+
+Si vous souhaitez changer les noms qui apparaissent (ici annaix) par le votre, vous pouvez modifier dans les différents fichiers `variable.tf` la variable `author` en changeant la clé `default` avec la valeur de votre choix.
+
 ## Lancement
 
 Une fois le paramétrage réalisé, vous pouvez exécuter terraform. Pour ce faire, vous devez vous rendre à l'aide d'un terminal au niveau du fichier main.tf se trouvant au chemin terraform/app puis:
